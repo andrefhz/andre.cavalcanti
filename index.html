@@ -3,6 +3,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="fontawesome/css/all.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css" />
         <title>André Cavalcanti</title>
 
@@ -15,20 +16,30 @@
         />
     </head>
     <body>
-        <div class="header">
-            <nav>
+        <header>
+            <nav class="nav-bar">
                 <a href="#" class="logo">André Cavalcanti</a>
-                <ul>
+
+                <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Portfólio</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li>
+                        <div class="btn-dark-white" id="btn">
+                            <span id="btnText">Dark</span>
+                            <i class="fa-solid fa-moon" id="btnIcon"></i>
+                        </div>
+                    </li>
                 </ul>
-                <div class="btn-dark-white" id="btn">
-                    <span id="btnText">Dark</span>
-                    <img src="img/moon.png" alt="Dark mode" id="btnIcon" />
+                <div class="mobile-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </nav>
+        </header>
+        <main>
             <div class="content">
                 <h1>Ola !</h1>
                 <h2>Eu sou o André Cavalcanti</h2>
@@ -40,14 +51,14 @@
                 </p>
                 <a href="#">Contrate-me</a>
             </div>
-            <div class="content-img">
+            <!-- <div class="content-img">
                 <img src="img/andre.png" alt="André" title="André" />
                 <div class="pattern">
                     <img src="img/fundo.png" alt="Blue BG" />
                     <img src="img/fundo.png" alt="Blue BG" />
                 </div>
-            </div>
-        </div>
+            </div> -->
+        </main>
 
         <script src="js/script.js"></script>
     </body>

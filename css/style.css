@@ -23,43 +23,63 @@ body {
     transition: background 0.8s, color 0.8s;
 }
 
-.header {
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 8%;
-    position: relative;
-    overflow: hidden;
-}
 
-nav {
+
+
+
+.nav-bar {
+    min-height: 70px;
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    justify-content: space-between;
+    padding: 0 34px;
 }
-nav ul {
-    width: 100%;
-    text-align: right;
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
     list-style: none;
-    margin-right: 50px;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 5px 15px;
-}
-
-nav ul li a {
+.nav-menu li a {
+    transition: 0.5s ease;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
 }
+
+.nav-menu li a:hover {
+    color: #ff0043;
+    
+}
+
+.mobile-btn {
+    display: none;
+    cursor: pointer;
+    
+}
+.container {
+    width: 70%;
+}
+
+.mobile-btn .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 .logo {
     text-decoration: none;
     white-space: nowrap;
     font-weight: bold;
     color: var(--text-color);
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .btn-dark-white {
@@ -68,10 +88,12 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
     cursor: pointer;
+}
+#btnIcon {
+    margin-left: 5px;
 }
 .btn-dark-white img {
     width: 25px;
@@ -81,6 +103,8 @@ nav ul li a {
 .content {
     margin-top: 12%;
     max-width: 600px;
+    width: 500px;
+    
 }
 
 .content h1 {
@@ -136,4 +160,42 @@ nav ul li a {
         margin-top: 20px;
         opacity: 0.4;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-btn {
+        display: block;
+    }
+
+    
+    .mobile-btn.active .bar:nth-child(1) {
+       transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 0px 0px;
+        flex-direction: column;
+        background-color: var(--background-color);
+        text-align: center;
+        width: 100%;
+        transition: 0.3s;
+        height: 100vh;
+        align-items: center;
+    }
+    .nav-menu li {
+        margin: 25px 0;
+    } 
+    .nav-menu.active {
+        left: 0;
+    }
+
 }
