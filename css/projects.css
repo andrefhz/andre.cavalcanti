@@ -20,7 +20,9 @@
     overflow: hidden;
     text-decoration: none;
     padding: 15px;
+    transition: all 0.4s;
 }
+
 
 .project picture {
     width: 100%;
@@ -64,6 +66,11 @@
 .project .data {
     font-size: 14px;
     color: var(--secondary);
+}
+
+.project:hover {
+    transition: all 0.2s;
+    box-shadow: 0px -4px 0px 0px rgba(16,127,210,1);
 }
 
 .project:hover strong {

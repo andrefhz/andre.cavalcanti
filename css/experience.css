@@ -5,11 +5,18 @@
     grid-column: 1 / 3;
 }
 
-.experience .exp-content {
-    border-left: 4px solid #107fd2;
+.exp-content {
+    padding: 10px;
     border-radius: 3px;
-    padding-left: 10px;
     margin: 20px 0px;
+    transition: all 0.4s;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.exp-content:hover {
+    box-shadow: 11px -11px 0px -3px rgba(16,127,210,1);
+    transition: all 0.4s;
 }
 
 .experience h2 {
